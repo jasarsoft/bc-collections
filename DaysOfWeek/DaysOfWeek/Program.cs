@@ -18,6 +18,11 @@ namespace DaysOfWeek
                 "Saturday",
                 "Sunday"
             };
+
+            foreach (var day in daysOfWeek)
+            {
+                Console.WriteLine(day);
+            }
         }
     }
 }
