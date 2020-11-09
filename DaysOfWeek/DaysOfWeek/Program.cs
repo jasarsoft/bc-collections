@@ -12,13 +12,22 @@ namespace DaysOfWeek
             {
                 "Monday",
                 "Tuesday",
-                "Wednesday",
+                "Wednsday",
                 "Thursday",
                 "Friday",
                 "Saturday",
                 "Sunday"
             };
 
+            Console.WriteLine(("Before:"));
+            foreach (var day in daysOfWeek)
+            {
+                Console.WriteLine(day);
+            }
+
+            daysOfWeek[2] = "Wednesday";
+
+            Console.WriteLine("\r\nAfter:");
             foreach (var day in daysOfWeek)
             {
                 Console.WriteLine(day);
