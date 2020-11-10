@@ -16,6 +16,7 @@ namespace TopTenPops
             Country lilliput = new Country("Lilliput", "LIL", "Somewhare", 2_000_000);
             int lilliputIndex = countries.FindIndex(x => x.Population < 2_000_000);
             countries.Insert(lilliputIndex, lilliput);
+            countries.RemoveAt(lilliputIndex);
 
             foreach (var country in countries)
             {
