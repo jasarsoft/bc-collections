@@ -33,6 +33,25 @@ namespace TopTenPops
             return countries;
         }
 
+        public List<Country> ReadAllCountries()
+        {
+            List<Country> countries = new List<Country>();
+
+            using (StreamReader sr = new StreamReader(_csvFilePath))
+            {
+                //read header line
+                sr.ReadLine();
+
+                string csvLine;
+                while ((csvLine = sr.ReadLine()) != null)
+                {
+                    countries.Add(ReadCountryFromCsvLine(csvLine));
+                }
+            }
+
+            return countries;
+        }
+
         public Country ReadCountryFromCsvLine(string csvLine)
         {
             string[] parts = csvLine.Split(new char[]{','});
