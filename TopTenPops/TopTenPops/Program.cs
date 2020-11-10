@@ -14,7 +14,7 @@ namespace TopTenPops
             //Country[] countries = reader.ReadFirstNCountries(10);
             List<Country> countries = reader.ReadAllCountries();
             Country lilliput = new Country("Lilliput", "LIL", "Somewhare", 2_000_000);
-            int lilliputIndex;
+            int lilliputIndex = countries.FindIndex(x => x.Population < 2_000_000);
             countries.Insert(lilliputIndex, lilliput);
 
             foreach (var country in countries)
