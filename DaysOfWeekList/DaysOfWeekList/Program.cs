@@ -7,9 +7,16 @@ namespace DaysOfWeekList
     {
         static void Main(string[] args)
         {
-            List<string> daysOfWeek = new List<string>();
-
-            List<int> ints = new List<int>();
+            List<string> daysOfWeek = new List<string>()
+            {
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+            };
         }
     }
 }
