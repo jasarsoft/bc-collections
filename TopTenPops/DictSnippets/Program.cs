@@ -14,6 +14,8 @@ namespace DictSnippets
             var countries = new Dictionary<string, Country>();
             countries.Add(norway.Code, norway);
             countries.Add(finland.Code, finland);
+
+            Country selectedCountry = countries["NOR"];
         }
     }
 }
