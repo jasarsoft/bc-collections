@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TopTenPops
 {
-    class Country
+    public class Country
     {
         public string Name { get; }
         public string Code { get; }
