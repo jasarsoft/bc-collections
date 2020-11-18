@@ -20,7 +20,12 @@ namespace DictSnippets
 
             foreach (var country in countries)
             {
-                Console.WriteLine(country.Value);
+                Console.WriteLine(country.Value.Name);
+            }
+
+            foreach (var country in countries.Values)
+            {
+                Console.WriteLine(country.Name);
             }
         }
     }
