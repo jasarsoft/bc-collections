@@ -12,6 +12,8 @@ namespace DictSnippets
             Country finland = new Country("Finland", "FIN", "Europe", 5_511_303);
 
             var countries = new Dictionary<string, Country>();
+            countries.Add(norway.Code, norway);
+            countries.Add(finland.Code, finland);
         }
     }
 }
