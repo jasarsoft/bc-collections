@@ -34,7 +34,13 @@ namespace DictSnippets
             countriesDic.Add(norway.Code, norway);
             countriesDic.Add(finland.Code, finland);
 
-            Console.WriteLine(countriesDic["MUS"].Name);
+            bool exists = countriesDic.TryGetValue("MUS", out Country countryOut);
+            if (exists)
+                Console.WriteLine(countryOut.Name);
+            else
+            {
+                Console.WriteLine("There is no country with the code MUS");
+            }
         }
     }
 }
