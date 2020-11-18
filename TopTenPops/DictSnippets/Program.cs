@@ -29,6 +29,10 @@ namespace DictSnippets
             {
                 Console.WriteLine(country.Name);
             }
+
+            var countriesDic = new Dictionary<string, Country>();
+            countriesDic.Add(norway.Code, norway);
+            countriesDic.Add(norway.Code, norway);
         }
     }
 }
