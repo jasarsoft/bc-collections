@@ -32,7 +32,9 @@ namespace DictSnippets
 
             var countriesDic = new Dictionary<string, Country>();
             countriesDic.Add(norway.Code, norway);
-            countriesDic.Add(norway.Code, norway);
+            countriesDic.Add(finland.Code, finland);
+
+            Console.WriteLine(countriesDic["MUS"].Name);
         }
     }
 }
