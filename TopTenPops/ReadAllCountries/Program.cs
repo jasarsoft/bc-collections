@@ -13,9 +13,14 @@ namespace ReadAllCountries
             CsvReader reader = new CsvReader(filePath);
             List<Country> countries = reader.ReadAllCountries();
 
-            foreach (var country in countries.Take(20).Where(x => !x.Name.Contains(',')))
+            foreach (var country in countries.Where(x => !x.Name.Contains(',')).Take(20))
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
+            }
+
+            for (int i = 12; i < 14; i++)
+            {
+                Console.WriteLine(countries[i].Name);
             }
         }
     }
