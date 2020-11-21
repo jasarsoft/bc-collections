@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using TopTenPops;
 
 namespace ReadAllCountries
@@ -13,7 +14,12 @@ namespace ReadAllCountries
             CsvReader reader = new CsvReader(filePath);
             List<Country> countries = reader.ReadAllCountries();
 
-            foreach (var country in countries.Where(x => !x.Name.Contains(',')).Take(20))
+            var filteredCountries = countries.Where(x => !x.Name.Contains(','));
+            var filteredCountries2 = from country in countries
+                where !country.Name.Contains(',')
+                select country;
+
+            foreach (var country in filteredCountries2 )
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
