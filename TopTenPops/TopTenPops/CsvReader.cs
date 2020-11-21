@@ -52,6 +52,26 @@ namespace TopTenPops
             return countries;
         }
 
+        public Dictionary<string, Country> ReadAllCountriesDict()
+        {
+            var countries = new Dictionary<string, Country>();
+
+            using (StreamReader sr = new StreamReader(_csvFilePath))
+            {
+                //read header line
+                sr.ReadLine();
+
+                string csvLine;
+                while ((csvLine = sr.ReadLine()) != null)
+                {
+                    var country = ReadCountryFromCsvLine(csvLine);
+                    countries.Add(country.Code, country);
+                }
+            }
+
+            return countries;
+        }
+
         public Country ReadCountryFromCsvLine(string csvLine)
         {
             string[] parts = csvLine.Split(',');

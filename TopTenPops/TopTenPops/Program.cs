@@ -11,6 +11,20 @@ namespace TopTenPops
 
             CsvReader reader = new CsvReader(filePath);
 
+            Dictionary<string, Country> countriesDict = reader.ReadAllCountriesDict();
+            Console.WriteLine("Which country code do you want to look you?");
+            string userInput = Console.ReadLine();
+
+            bool gotCountry = countriesDict.TryGetValue(userInput, out Country countryDict);
+            if (!gotCountry)
+            {
+                Console.WriteLine($"Sorry, there is no country  with code {userInput}");
+            }
+            else
+            {
+                Console.WriteLine($@"{countryDict.Name} has population {PopulationFormatter.FormatPopulation(countryDict.Population)}");
+            }
+
             //Country[] countries = reader.ReadFirstNCountries(10);
             List<Country> countries = reader.ReadAllCountries();
             Country lilliput = new Country("Lilliput", "LIL", "Somewhare", 2_000_000);
