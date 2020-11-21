@@ -13,7 +13,7 @@ namespace ReadAllCountries
             CsvReader reader = new CsvReader(filePath);
             List<Country> countries = reader.ReadAllCountries();
 
-            foreach (var country in countries.Take(10))
+            foreach (var country in countries.OrderBy(x => x.Name))
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
