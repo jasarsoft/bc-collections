@@ -1,0 +1,4 @@
+# Beginning C# Collections
+### by Simon Robinson
+
+Collections are essential to store almost any real data in apps, but the vast number of different collections can be confusing. In this course, Beginning C# Collections, you will gain the ability to leverage the most commonly used collections to query data. First, you will learn how and when to use the array, the list, and the dictionary - the three most widely used collections - to group data together. Next, you will discover how to query data using the foreach and for loops and also using LINQ. Finally, you will explore how to put collections inside other collections to accomplish tasks such as partitioning data. When you're finished with this course, you will have the skills to store data in collections, and to look up, enumerate, query, and modify that data using the collections in a variety of simple scenarios.
