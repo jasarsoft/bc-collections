@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopTenPops", "TopTenPops\To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictSnippets", "DictSnippets\DictSnippets.csproj", "{3AD6C25F-9DF5-438D-950B-323A8F91734B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadCountriesForLoop", "ReadCountriesForLoop\ReadCountriesForLoop.csproj", "{5A5E3EDF-888D-457D-B8A6-1F2F72D42D5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadCountriesForLoop", "ReadCountriesForLoop\ReadCountriesForLoop.csproj", "{5A5E3EDF-888D-457D-B8A6-1F2F72D42D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadAllCountries", "ReadAllCountries\ReadAllCountries.csproj", "{49899A56-D790-45F6-AB9D-870051A71029}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5A5E3EDF-888D-457D-B8A6-1F2F72D42D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5E3EDF-888D-457D-B8A6-1F2F72D42D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A5E3EDF-888D-457D-B8A6-1F2F72D42D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49899A56-D790-45F6-AB9D-870051A71029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49899A56-D790-45F6-AB9D-870051A71029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49899A56-D790-45F6-AB9D-870051A71029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49899A56-D790-45F6-AB9D-870051A71029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
