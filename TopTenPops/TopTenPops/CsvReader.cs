@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TopTenPops
 {
-    class CsvReader
+    public class CsvReader
     {
         private string _csvFilePath;
 
