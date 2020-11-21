@@ -11,6 +11,7 @@ namespace ReadCountriesForLoop
             string filePath = "../../../../Pop by Largest Final.csv";
             CsvReader reader = new CsvReader(filePath);
             List<Country> countries = reader.ReadAllCountries();
+            reader.RemoveCommaCountries(countries);
 
             Console.Write("Enter no. of countries to display> ");
             bool inputIsInt = int.TryParse(Console.ReadLine(), out int userInput);
