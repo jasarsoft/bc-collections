@@ -52,7 +52,7 @@ namespace TopTenPops
             return countries;
         }
 
-        public Dictionary<string, List<Country>> ReadAllCountries2()
+        public Dictionary<string, List<Country>> ReadAllCountriesRegion()
         {
             var countries = new Dictionary<string, List<Country>>();
 
