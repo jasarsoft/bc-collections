@@ -12,7 +12,7 @@ namespace ReadAllCountries
         {
             string filePath = "../../../../Pop by Largest Final.csv";
             CsvReader reader = new CsvReader(filePath);
-            List<Country> countries = reader.ReadAllCountries();
+            IList<Country> countries = reader.ReadAllCountries();
 
             var filteredCountries = countries.Where(x => !x.Name.Contains(','));
             var filteredCountries2 = from country in countries
