@@ -7,17 +7,17 @@ namespace NoughtsCrosses
     class Game
     {
         // using a jagged array
-        private Square[][] _board =
-        {
-            new Square[3],
-            new Square[3],
-            new Square[3]
-        };
+        //private Square[][] _board =
+        //{
+        //    new Square[3],
+        //    new Square[3],
+        //    new Square[3]
+        //};
 
         // replace with this definition of board to see how to delare
         // with a multi-dimensional array. 
         // You'll then need to replace all [][] operators with [,] for the code to compile
-        //		private Square[,] _board = new Square[3, 3];
+        private Square[,] _board = new Square[3, 3];
 
 
         // replace with this definition of board to see how to
@@ -50,7 +50,7 @@ namespace NoughtsCrosses
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
-                    Console.Write(" " + _board[i][j]);
+                    Console.Write(" " + _board[i,j]);
                 Console.WriteLine();
             }
 
@@ -70,13 +70,13 @@ namespace NoughtsCrosses
             if (row < 1 || row > 3 || column < 1 || column > 3)
                 return false;
 
-            if (_board[row - 1][column - 1].Owner != Player.None)
+            if (_board[row - 1,column - 1].Owner != Player.None)
             {
                 Console.WriteLine("Square is already occupied");
                 return false;
             }
 
-            _board[row - 1][column - 1] = new Square(player);
+            _board[row - 1,column - 1] = new Square(player);
             return true;
         }
     }
